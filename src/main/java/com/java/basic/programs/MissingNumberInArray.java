@@ -5,7 +5,7 @@ public class MissingNumberInArray {
 	public static void main(String[] args) {
 
 		int[] arr = { 1, 2, 3, 4, 6, 7 };
-		int n = 7;
+		int n = arr.length + 1;
 		System.out.println("length of array is " + n);
 
 		printArray(arr);
@@ -18,23 +18,17 @@ public class MissingNumberInArray {
 
 	private static int MissingNumberInArray(int[] arr, int n) {
 
-		int missingNumber = 0;
+		int sum = n * (n + 1) / 2;
 
-		for (int i = 0; i < arr.length; i++) {
+		System.out.println("sum is-- " + sum);
 
-			for (int j = 1; j <= n; j++) {
+		for (int num : arr) {
 
-				if (arr[i] == j) {
-
-				} else {
-					missingNumber = arr[i];
-				}
-
-			}
+			sum = sum - num;
 
 		}
 
-		return missingNumber;
+		return sum;
 	}
 
 	private static void printArray(int[] arr) {
