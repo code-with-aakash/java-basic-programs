@@ -4,7 +4,7 @@ public class StringIsPalindromeOrNot {
 
 	public static void main(String[] args) {
 
-		String st = "mumbai";
+		String st = "mum";
 
 		palindromeCheck(st);
 
@@ -14,15 +14,15 @@ public class StringIsPalindromeOrNot {
 
 		String abc = "";
 
-		for (int i = st.length()-1; i >= 0; i--) {
 
-			abc = abc + st.charAt(i);
+		for (int i = st.length() - 1; i >= 0; i--) {
+
+            abc += st.charAt(i);
 
 		}
-		if(abc.equalsIgnoreCase(st)) {
+		if (abc.equalsIgnoreCase(st)) {
 			System.out.println("String is Palindrome");
-		}
-		else {
+		} else {
 			System.out.println("String is Not Palindrome");
 		}
 

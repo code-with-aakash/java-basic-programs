@@ -1,5 +1,7 @@
 package com.java.basic.programs;
 
+import java.util.ArrayList;
+
 public class SecondMaximumValueInArray {
 
 	public static void main(String[] args) {
@@ -20,17 +22,19 @@ public class SecondMaximumValueInArray {
 
 		int max = 0;
 
+		
+
 		int max2 = 0;
 
-		for (int i = 0; i < arr.length; i++) {
+		for (int j : arr) {
 
-			if (arr[i] > max) {
+			if (j > max) {
 				max2 = max;
-				max = arr[i];
+				max = j;
 
-			} else if (arr[i] > max2 && arr[i] != max) {
+			} else if (j > max2 && j != max) {
 
-				max2 = arr[i];
+				max2 = j;
 
 			}
 		}
@@ -41,8 +45,8 @@ public class SecondMaximumValueInArray {
 	private static void printArray(int[] arr) {
 		// TODO Auto-generated method stub
 
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(" " + arr[i]);
+		for (int j : arr) {
+			System.out.print(" " + j);
 		}
 		System.out.println();
 

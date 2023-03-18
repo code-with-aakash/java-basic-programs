@@ -4,8 +4,8 @@ public class MissingNumberInArray {
 
 	public static void main(String[] args) {
 
-		int[] arr = { 1, 2, 3, 4, 6, 7 };
-		int n = arr.length + 1;
+		int[] arr = { 1, 2, 3, 4, 5 };
+		int n = 6;
 		System.out.println("length of array is " + n);
 
 		printArray(arr);
@@ -16,6 +16,10 @@ public class MissingNumberInArray {
 
 	}
 
+	private static int MissingNumberInArray() {
+		return MissingNumberInArray(null, 0);
+	}
+
 	private static int MissingNumberInArray(int[] arr, int n) {
 
 		int sum = n * (n + 1) / 2;
@@ -23,9 +27,7 @@ public class MissingNumberInArray {
 		System.out.println("sum is-- " + sum);
 
 		for (int num : arr) {
-
 			sum = sum - num;
-
 		}
 
 		return sum;
@@ -34,8 +36,8 @@ public class MissingNumberInArray {
 	private static void printArray(int[] arr) {
 		// TODO Auto-generated method stub
 
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(" " + arr[i]);
+		for (int i : arr) {
+			System.out.print(" " + i);
 		}
 		System.out.println();
 
