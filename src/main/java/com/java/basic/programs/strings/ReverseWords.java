@@ -10,16 +10,16 @@ public class ReverseWords {
 		String[] str = s.trim().split(" ");
 
 		String str2 = "";
-		
-		if(str.length>1) {
 
-		for (int i = str.length - 1; i >= 0; i--) {
+		if (str.length > 1) {
 
-			str2 = str2.trim() +" "+ str[i].trim() ;
+			for (int i = str.length - 1; i >= 0; i--) {
 
-		}
-		}else {
-			str2=s.trim();
+				str2 = str2.trim() + " " + str[i].trim();
+
+			}
+		} else {
+			str2 = s.trim();
 		}
 		System.out.println(str2);
 
