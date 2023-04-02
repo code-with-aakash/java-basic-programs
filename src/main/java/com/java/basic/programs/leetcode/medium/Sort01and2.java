@@ -1,4 +1,4 @@
-package com.java.basic.programs.array.medium;
+package com.java.basic.programs.leetcode.medium;
 
 public class Sort01and2 {
 
